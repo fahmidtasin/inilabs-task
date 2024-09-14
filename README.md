@@ -1,66 +1,122 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# To-Do App & Object-Oriented Programming Tasks
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+This repository contains a simple To-Do application built using Laravel as well as solutions to a series of object-oriented programming tasks covering inheritance, interfaces, encapsulation, and polymorphism.
 
-## About Laravel
+## Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- Create, Read, Update, and Delete (CRUD) operations for a To-Do list.
+- OOP tasks covering class inheritance, interface implementation, encapsulation, and polymorphism.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Laravel To-Do App
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+The To-Do App provides basic CRUD functionality to manage tasks. It uses Blade for view rendering and Bootstrap for styling.
 
-## Learning Laravel
+### Routes
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- `/`: Demonstrates **Class Inheritance** by displaying a sample shape module.
+- `/log`: Demonstrates **Interface Implementation** through logging messages.
+- `/employee`: Demonstrates **Encapsulation** with an Employee management module.
+- `/animals`: Demonstrates **Polymorphism** with animal sounds.
+- `/todos`: Provides the main **CRUD functionality** for managing To-Do tasks.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Object-Oriented Programming Tasks
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### **Task 1: Class Inheritance**
 
-## Laravel Sponsors
+Implemented classes to represent geometric shapes (such as circles and rectangles) with methods for calculating areas. This demonstrates inheritance by sharing common properties and methods among different shape classes.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### **Task 2: Interface Implementation**
 
-### Premium Partners
+Developed a logging system using interfaces. Various classes implement a logging interface, demonstrating how interfaces can standardize behavior across multiple implementations.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### **Task 3: Encapsulation**
+
+Designed a class to manage employee data. This class securely manages employee salaries, demonstrating the principle of encapsulation by using getter and setter methods to control access to sensitive data.
+
+### **Task 4: Polymorphism**
+
+Created a set of animal classes that override a method for making sounds. This demonstrates polymorphism, as each animal class implements the same method differently.
+
+## Requirements
+
+- PHP 8.1 or higher
+- Composer
+- Laravel 10.x
+- MySQL or any other database supported by Laravel
+- Git
+
+## Installation
+
+Follow these steps to set up the project on your local machine:
+
+1. **Clone the repository**:
+
+    ```bash
+    git clone https://github.com/fahmidtasin/inilabs-task.git
+    cd inilabs-task
+    ```
+
+2. **Install dependencies**:
+
+   Run the following command to install all required dependencies:
+
+    ```bash
+    composer install
+    ```
+
+3. **Set up environment variables**:
+
+   Copy the `.env.example` file to create your `.env` file:
+
+    ```bash
+    cp .env.example .env
+    ```
+
+   Update the `.env` file with your database credentials.
+
+4. **Generate application key**:
+
+   Run the following command to generate the application key:
+
+    ```bash
+    php artisan key:generate
+    ```
+
+5. **Run migrations**:
+
+   Set up your database by running the migrations:
+
+    ```bash
+    php artisan migrate
+    ```
+
+6. **Serve the application**:
+
+   Run the development server:
+
+    ```bash
+    php artisan serve
+    ```
+
+   Visit `http://localhost:8000` in your browser to view the application.
+
+## Usage
+
+- **Creating a Task**: Navigate to the `/todos/create` URL and fill out the form to create a new task.
+- **Viewing Tasks**: The homepage displays all the tasks. Navigate to `/todos` to view them.
+- **Editing a Task**: Click the edit button next to a task to update it.
+- **Deleting a Task**: Click the delete button to remove a task.
 
 ## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+If you'd like to contribute, please follow these steps:
 
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Commit your changes (`git commit -m 'Add new feature'`).
+4. Push to the branch (`git push origin feature-branch`).
+5. Open a Pull Request.
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
